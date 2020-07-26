@@ -90,7 +90,37 @@ Choose one of:
 
 ## Firmware
 
-The firmware is pretty self-explanatory.
+### Getting the Tracker Edge Firmware
+
+The Tracker Edge firmware can be downloaded from Github:
+
+[https://github.com/particle-iot/tracker-edge](https://github.com/particle-iot/tracker-edge)
+
+After downloading the source, you will need to fetch the library dependencies. This can be done from a command prompt or terminal window with the git command line tools installed:
+
+```
+cd tracker-edge
+git submodule init
+git submodule update --recursive
+```
+
+Be sure to target 1.5.4-rc.1 or later for your build. Device OS 1.5.3 or later is required, only version 1.5.4-rc.1 and later are available in the full set of tools including Workbench, CLI, and Web IDE.
+
+### Add the libraries
+
+From the command palette in Workbench, **Particle: Install Library** then enter **CameraHelperRK**. 
+
+If you prefer to edit project.properties directly, add these:
+
+```
+dependencies.CameraHelperRK=0.0.1
+```
+
+This library includes two other libraries, **uCamIII** to handle interacting with the camera and **Base64RK** to do the Base64 encoding.
+
+### The full source
+
+The firmware is pretty self-explanatory. There is a copy in source/main.cpp as well.
 
 ```cpp
 #include "Particle.h"
