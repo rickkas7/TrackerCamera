@@ -10,11 +10,11 @@
     "contributors": [],
     "license": "Apache Version 2.0",
     "dependencies": {
-        "particle-api-js": "^9.0.1",
+        "particle-api-js": "^11.1.3",
         "sha1": "^1.1.1",
         "yargs": "^15.4.1"
     },
     "engines": {
-        "node": ">=12.14.0"
+        "node": ">=18"
     }
 }
